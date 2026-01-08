@@ -1,0 +1,6 @@
+const url= 'https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json';
+
+fetch(url)
+.then(res=>res.json())
+.then(data=>console.log(data.map(item=>item.price)))
+.catch(err=>console.error(err));
