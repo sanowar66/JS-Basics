@@ -1,0 +1,8 @@
+const url= 'https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json';
+
+const fetchpost=async()=>{
+const res=await fetch(url);
+const data=await res.json();
+console.log('price='data.map(item=>item.price));
+}
+fetchpost();
