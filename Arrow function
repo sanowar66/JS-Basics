@@ -1,0 +1,6 @@
+const functionName = param => {
+expression;
+}
+const functionName = param => expression;
+const functionName = (param) => expression;
+const functionName = (param1, ..., paramN) => expression;
