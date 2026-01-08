@@ -1,0 +1,17 @@
+const url1 = 'https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json';
+const url3 = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+const fetchpost=async()=>{
+    try{
+const [res1, res2]=await Promise.all([fetch(url1),fetch(url3)]);
+const [item,storehouse]=await Promise.all([res1.json(), res2.json()]);
+console.log(item.map(itemm=>itemm.name));
+console.log(storehouse);
+}
+catch{
+    err=>console.log('Got error');
+}finally{
+    console.log('iam done');
+}
+}
+fetchpost();
